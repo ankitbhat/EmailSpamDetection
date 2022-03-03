@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<style>
+	.header {
+  text-align: center;font-family:Georgia,serif;
+	color: Black; font-size: 30px;
+  text-shadow: 2px 2px 5px red;
+    }
+	h2{text-align: center;font-family:Arial,Helvetica, sans-serif;
+	color: Blue;font-size: 40px;margin: 6px;
+	text-shadow: 2px 2px 5px yellow;}
+   body{ margin: 0; background-image: -moz-radial-gradient(rgb(99, 136, 34),rgb(161, 204, 160));}
+   h3{text-align: center;font-family:Arial,Helvetica, sans-serif;
+    font-size:40px; color: blue;}
+   form {text-align: center;font-family:Arial,Helvetica, sans-serif;}
+   h4{text-align: center;font-family:Arial,Helvetica, sans-serif;
+    font-size:40px; color: red;}
+    h5{text-align: center;font-family:Arial,Helvetica, sans-serif;
+    font-size:40px; color: black;}
+   form {text-align: center;font-family:Arial,Helvetica, sans-serif;}
+  textarea {
+  width: 50%;
+  height: 200px;
+  padding: 12px 20px;
+  margin: -16px;
+  box-sizing: border-box;
+  border: 4px solid red;
+  border-radius: 20px;
+  background-color: lightcyan;
+  color: black;
+  font-family:Arial,Helvetica, sans-serif;
+  font-size:25px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: blue;
+  border: none;
+  border: 4px solid blue;
+  border-radius: 20px;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-size:30px;
+  text-shadow: 2px 2px 5px yellow;
+  }
+  .button:active {
+  background-color: #1929b9;
+  box-shadow: 0 5px rgb(156, 11, 11);
+  transform: translateY(4px);
+}
+</style>
+	<title>Spam Detection App</title>
+	<div class = "header">
+	<h1>Spam email Detector</>
+	</div>
+</head>
+	<body>
+    	<h2> Enter email message</h2><br>
+    	<form method="POST" action="{{url_for('predict')}}">
+      <textarea name = "email">{{request.form['email']}}</textarea>
+      <br><br>
+      <input type="submit" value="Predict" class="button">
+      </form>
+      <form method="GET" action="{{url_for('home')}}">
+      <input type="submit" value="Reset" class="button"/>
+      </form>
+      {%for key,value in pred%}
+      {%if key == "null"%}
+      <h5>Please enter a message</h5>
+      {%elif key == "ham"%}
+      <h3>Not Spam with confidence = {{value}} percent</h3>
+      {%elif key == "spam"%}
+      <h4>Spam with confidence =  {{value}} percent</h4>
+      {%endif%}
+      {%endfor%}
+    </body><br>
+    
+</html>
