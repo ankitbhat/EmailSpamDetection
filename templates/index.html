@@ -72,9 +72,9 @@ input[type=button], input[type=submit], input[type=reset] {
       {%if key == "null"%}
       <h5>Please enter a message</h5>
       {%elif key == "ham"%}
-      <h3>Not Spam with confidence = {{value}} percent</h3>
+      <h3>Not Spam with confidence {{value}} %</h3>
       {%elif key == "spam"%}
-      <h4>Spam with confidence =  {{value}} percent</h4>
+      <h4>Spam with confidence {{value}} %</h4>
       {%endif%}
       {%endfor%}
     </body><br>
