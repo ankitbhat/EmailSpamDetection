@@ -249,7 +249,7 @@ size of the dataset. In this case, a simple classification model like logistic r
 the best performance.
 # References:
 
-![](https://www.sciencedirect.com/science/article/pii/S2405844018353404)
+[https://www.sciencedirect.com/science/article/pii/S2405844018353404](https://www.sciencedirect.com/science/article/pii/S2405844018353404)
 
-[](https://www.researchgate.net/publication/50211017_Machine_Learning_Methods_for_Spam_E-Mail_Classification)
+[https://www.researchgate.net/publication/50211017_Machine_Learning_Methods_for_Spam_E-Mail_Classification](https://www.researchgate.net/publication/50211017_Machine_Learning_Methods_for_Spam_E-Mail_Classification)
 
