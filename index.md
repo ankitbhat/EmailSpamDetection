@@ -19,7 +19,7 @@ Build a machine learning model to predict whether an email message is spam or no
 
 The dataset for the project was obtained from easy_ham, easy_ham_2, spam
 and spam_2 directories of the apache foundation’s spamassassin public corpus.
-https://spamassassin.apache.org/old/publiccorpus/.
+[](https://spamassassin.apache.org/old/publiccorpus/).
 The dataset contains more than 5000 emails. The data was processed using numpy and pandas and put into a csv
 format with two columns email and label. The label contains two values. 1 represents
 spam and 0 represents not spam.
@@ -249,7 +249,7 @@ size of the dataset. In this case, a simple classification model like logistic r
 the best performance.
 # References:
 
-https://www.sciencedirect.com/science/article/pii/S2405844018353404
+[](https://www.sciencedirect.com/science/article/pii/S2405844018353404)
 
-https://www.researchgate.net/publication/50211017_Machine_Learning_Methods_for_Spam_E-Mail_Classification
+[](https://www.researchgate.net/publication/50211017_Machine_Learning_Methods_for_Spam_E-Mail_Classification)
 
